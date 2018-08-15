@@ -1,0 +1,10 @@
+.b-logo {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__lnk {
+    display: block;
+  }
+}

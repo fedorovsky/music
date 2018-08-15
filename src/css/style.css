@@ -1,14 +1,14 @@
-@import "normalize.css";
-@import "variables.css";
-@import "fonts.css";
-@import "media.css";
-@import "breakpoint-desktop.css";
-@import "breakpoint-tablet.css";
-@import "breakpoint-mobile.css";
-@import "section-social.css";
+@import "settings/_index.css";
+@import "containers/_index.css";
+@import "sections/_index.css";
+@import "blocks/_index.css";
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-  font-family: "MuseoSans", sans-serif;
+  font-family: 'Montserrat', "MuseoSans", sans-serif;
   font-size: 20px;
 
   @media (--lg-only) {

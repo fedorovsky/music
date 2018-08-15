@@ -1,4 +1,4 @@
-.breakpoint-tablet {
+.tablet {
   display: none;
 
   @media (--sm-only) {
@@ -11,9 +11,11 @@
 }
 
 .left {
+  position: relative;
   flex: 1;
 }
 
 .right {
+  position: relative;
   flex: 1;
 }

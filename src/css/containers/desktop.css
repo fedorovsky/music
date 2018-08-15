@@ -1,4 +1,4 @@
-.breakpoint-desktop {
+.desktop {
   display: none;
 
   @media (--md-only) {

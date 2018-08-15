@@ -1,0 +1,41 @@
+.instagram {
+  position: relative;
+  border: 1px solid red;
+}
+
+.instagram-title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: #505050;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  padding-right: 11.25%;
+  padding-left: 11.25%;
+  margin: 0;
+  list-style-type: none;
+}
+
+.gallery-item {
+  box-sizing: border-box;
+  width: calc(50% - 6px);
+  margin-bottom: 12px;
+}
+
+.gallery-lnk {
+  display: block;
+}
+
+.gallery-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

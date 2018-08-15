@@ -1,0 +1,8 @@
+.b-footer-logo {
+  position: relative;
+  text-align: center;
+
+  &__lnk {
+    display: block;
+  }
+}

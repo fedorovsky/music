@@ -1,0 +1,10 @@
+.mobile {
+  position: relative;
+  display: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  @media (--xs-only) {
+    display: block;
+  }
+}

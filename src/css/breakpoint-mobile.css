@@ -1,7 +1,0 @@
-.breakpoint-mobile {
-  display: none;
-
-  @media (--xs-only) {
-    display: block;
-  }
-}

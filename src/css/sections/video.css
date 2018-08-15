@@ -1,0 +1,28 @@
+.video {
+  position: static;
+  border: 1px solid red;
+}
+
+.card {
+
+}
+
+.video-wrap {
+  position: relative;
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 56.25%; /* 16:9 */
+  border: 1px solid yellow;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.desc {
+
+}
