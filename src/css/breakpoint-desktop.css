@@ -1,0 +1,23 @@
+.breakpoint-desktop {
+  display: none;
+
+  @media (--md-only) {
+    display: block;
+  }
+
+  @media (--lg-only) {
+    display: block;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}

@@ -1,0 +1,24 @@
+.social {
+  border: 1px solid red;
+}
+
+.social-nav {
+  padding: 0;
+  margin: 0;
+}
+
+.social-item {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.social-lnk {
+  position: static;
+  line-height: 1.25rem;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+

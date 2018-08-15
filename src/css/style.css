@@ -1,0 +1,58 @@
+@import "normalize.css";
+@import "variables.css";
+@import "fonts.css";
+@import "media.css";
+@import "breakpoint-desktop.css";
+@import "breakpoint-tablet.css";
+@import "breakpoint-mobile.css";
+@import "section-social.css";
+
+html {
+  font-family: "MuseoSans", sans-serif;
+  font-size: 20px;
+
+  @media (--lg-only) {
+    font-size: 24px;
+  }
+}
+
+body {
+  background: var(--main-background-color);
+  border: 1px solid red;
+
+  @media (--xs-only) {
+    border-color: yellow;
+  }
+
+  @media (--sm-only) {
+    border-color: aqua;
+  }
+
+  @media (--md-only) {
+    border-color: blue;
+  }
+
+  @media (--lg-only) {
+    border-color: violet;
+  }
+}
+
+.bp-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
