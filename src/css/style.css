@@ -8,7 +8,7 @@
 }
 
 html {
-  font-family: 'Montserrat', "MuseoSans", sans-serif;
+  font-family: "Montserrat", "MuseoSans", sans-serif;
   font-size: 20px;
 
   @media (--lg-only) {
@@ -18,23 +18,24 @@ html {
 
 body {
   background: var(--main-background-color);
-  border: 1px solid red;
 
-  @media (--xs-only) {
-    border-color: yellow;
-  }
+  /* border: 1px solid red;
 
-  @media (--sm-only) {
-    border-color: aqua;
-  }
+   @media (--xs-only) {
+     border-color: yellow;
+   }
 
-  @media (--md-only) {
-    border-color: blue;
-  }
+   @media (--sm-only) {
+     border-color: aqua;
+   }
 
-  @media (--lg-only) {
-    border-color: violet;
-  }
+   @media (--md-only) {
+     border-color: blue;
+   }
+
+   @media (--lg-only) {
+     border-color: violet;
+   }*/
 }
 
 .bp-name {

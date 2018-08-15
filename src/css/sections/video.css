@@ -1,10 +1,12 @@
 .video {
   position: static;
-  border: 1px solid red;
+  padding-right: 11.25%;
+  padding-left: 11.25%;
 }
 
 .card {
-
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .video-wrap {
@@ -12,7 +14,7 @@
   height: 0;
   padding-top: 25px;
   padding-bottom: 56.25%; /* 16:9 */
-  border: 1px solid yellow;
+  background-color: var(--main-background-color);
 
   iframe {
     position: absolute;
@@ -24,5 +26,15 @@
 }
 
 .desc {
-
+  position: relative;
+  top: -0.75rem;
+  width: 90%;
+  padding: 0.25rem 0.5rem;
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.25rem;
+  color: #fff;
+  letter-spacing: 0.2px;
+  background-color: #222025;
 }
