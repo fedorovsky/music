@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb"],
   "parser": "babel-eslint",
   "globals": {
     "fetch": true,
@@ -9,14 +7,16 @@
     "document": true
   },
   "rules": {
+    "function-paren-newline": ["error", "consistent"],
+    "arrow-parens": ["error", "as-needed"],
     "no-console": 0,
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
     "quote-props": 0,
-    "linebreak-style": 0,
+    "linebreak-style": 0
   },
   "parserOptions": {
     "ecmaVersion": 6,
