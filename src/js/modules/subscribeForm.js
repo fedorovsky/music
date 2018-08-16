@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'jquery-validation';
 
-class Subscribe {
+class SubscribeForm {
   init() {
     this.form = $('#subscribe');
     this.initValidator();
@@ -55,4 +55,4 @@ class Subscribe {
   }
 }
 
-export default Subscribe;
+export default SubscribeForm;

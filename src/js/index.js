@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import MediaQueries from './modules/mediaQueries';
-import Subscribe from './modules/subscribe';
+import SubscribeForm from './modules/subscribeForm';
 import CopyVideo from './modules/copyVideo';
 import CopySubscribe from './modules/copySybscribe';
+import SubscribePopUp from './modules/subscribePopUp';
 import '../css/style.css';
 
 const mediaQueries = new MediaQueries();
@@ -14,17 +15,8 @@ mediaQueries.change('lg', message => console.log('Responsive ->', message));
 
 
 $(document).ready(() => {
-  new Subscribe().init();
+  new SubscribeForm().init();
+  new SubscribePopUp().init();
   new CopyVideo().init();
   new CopySubscribe().init();
-});
-
-$(document).ready(() => {
-  $('.btn-open').on('click', () => {
-    $('.menu-box').addClass('--state-open');
-  });
-
-  $('.btn-close').on('click', () => {
-    $('.menu-box').removeClass('--state-open');
-  });
 });
