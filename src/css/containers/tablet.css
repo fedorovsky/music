@@ -9,7 +9,7 @@
 .container {
   display: flex;
 
-  @media all and (orientation: landscape) {
+  @media (--sm-only) and (orientation: landscape) {
     width: 768px;
     margin: 0 auto;
   }
