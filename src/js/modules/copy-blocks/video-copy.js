@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import MediaQueries from './mediaQueries';
+import MediaQueries from '../mediaQueries';
 
 const mediaQueries = new MediaQueries();
 
-class CopyVideo {
+class VideoCopy {
   init() {
     this.videoSectionMobile = $('#mobile-video');
     this.videoSectionTablet = $('#tablet-video');
@@ -44,4 +44,4 @@ class CopyVideo {
   }
 }
 
-export default CopyVideo;
+export default VideoCopy;
