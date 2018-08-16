@@ -1,0 +1,31 @@
+.b-form {
+  &__input {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 35px;
+    color: #fff;
+    background-color: #000;
+    border: solid 2px #3a3b3d;
+    outline: none;
+
+    &.--size-block {
+      display: block;
+      width: 100%;
+    }
+
+    &.--type-error {
+      border-color: red;
+    }
+  }
+
+  &__error {
+    font-size: 13px;
+    color: red;
+  }
+
+  &__group {
+    margin-bottom: 0.75rem;
+  }
+}

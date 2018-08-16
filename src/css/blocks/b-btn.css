@@ -1,0 +1,15 @@
+.b-btn {
+  font-size: 0.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: #0b0b0c;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #fff;
+  border: none;
+
+  &.--size-block {
+    display: block;
+    width: 100%;
+  }
+}

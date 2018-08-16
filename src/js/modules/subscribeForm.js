@@ -3,7 +3,7 @@ import 'jquery-validation';
 
 class SubscribeForm {
   init() {
-    this.form = $('#subscribe');
+    this.form = $('#subscribe-form');
     this.initValidator();
     this.handlers();
   }
@@ -23,6 +23,11 @@ class SubscribeForm {
   initValidator() {
     const self = this;
     this.form.validate({
+      errorClass: '--type-error',
+      errorElement: 'span',
+      errorPlacement(error, element) {
+        error.addClass('b-form__error').insertAfter(element);
+      },
       rules: {
         email: {
           required: true,

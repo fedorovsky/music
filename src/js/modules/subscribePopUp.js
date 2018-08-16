@@ -2,9 +2,11 @@ import $ from 'jquery';
 
 class SubscribePopUp {
   init() {
-    this.subscribeBox = $('.menu-box');
-    this.btnOpenSubscribe = $('.btn-open');
-    this.btnCloseSubscribe = $('.btn-close');
+    this.subscribeBox = $('#subscribe-main');
+    this.btnOpenSubscribe = $('#subscribe-open');
+    this.btnCloseSubscribe = $('#subscribe-close');
+
+    this.phrasesBox = $('#phrases');
     this.handlers();
   }
 
@@ -19,6 +21,7 @@ class SubscribePopUp {
 
   closeSubscribe() {
     this.subscribeBox.removeClass('--state-open');
+    console.log('hello', this.phrasesBox.children().length);
   }
 }
 
