@@ -5,6 +5,7 @@ import VideoCopy from './modules/copy-blocks/video-copy';
 import SubscribeCopy from './modules/copy-blocks/subscribe-copy';
 import HeaderCopy from './modules/copy-blocks/header-copy';
 import SubscribePopUp from './modules/subscribePopUp';
+import SocialCopy from './modules/copy-blocks/social-copy';
 import '../css/style.css';
 
 const mediaQueries = new MediaQueries();
@@ -22,4 +23,5 @@ $(document).ready(() => {
   new VideoCopy().init();
   new SubscribeCopy().init();
   new HeaderCopy().init();
+  new SocialCopy().init();
 });
