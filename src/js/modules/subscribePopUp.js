@@ -5,8 +5,8 @@ class SubscribePopUp {
     this.subscribeBox = $('#subscribe-main');
     this.btnOpenSubscribe = $('#subscribe-open');
     this.btnCloseSubscribe = $('#subscribe-close');
-
     this.phrasesBox = $('#phrases');
+
     this.handlers();
   }
 
@@ -17,11 +17,27 @@ class SubscribePopUp {
 
   openSubscribe() {
     this.subscribeBox.addClass('--state-open');
+    this.hideAllPhrases();
+    this.showRandomPhrase();
   }
 
   closeSubscribe() {
     this.subscribeBox.removeClass('--state-open');
-    console.log('hello', this.phrasesBox.children().length);
+  }
+
+  hideAllPhrases() {
+    this.phrasesBox.children().each((i, element) => {
+      $(element).hide();
+    });
+  }
+
+  showRandomPhrase() {
+    const countPhrases = this.phrasesBox.children().length;
+    const random = Math.floor(Math.random() * countPhrases);
+    this.phrasesBox
+      .children()
+      .eq(random)
+      .show();
   }
 }
 
