@@ -1,3 +1,11 @@
+#video-section {
+  //display: none;
+
+  &.--is-visible {
+    display: block;
+  }
+}
+
 .video {
   position: static;
   padding-right: 11.25%;
