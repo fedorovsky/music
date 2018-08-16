@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import MediaQueries from './mediaQueries';
+import MediaQueries from '../mediaQueries';
 
 const mediaQueries = new MediaQueries();
 
-class CopySubscribe {
+class SubscribeCopy {
   init() {
     this.subscribeSectionMobile = $('#mobile-subscribe');
     this.subscribeSectionTablet = $('#tablet-subscribe');
@@ -44,4 +44,4 @@ class CopySubscribe {
   }
 }
 
-export default CopySubscribe;
+export default SubscribeCopy;
