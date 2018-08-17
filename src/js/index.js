@@ -2,7 +2,6 @@ import $ from 'jquery';
 import MediaQueries from './modules/mediaQueries';
 import SubscribeForm from './modules/subscribeForm';
 import VideoCopy from './modules/copy-blocks/video-copy';
-import SubscribeCopy from './modules/copy-blocks/subscribe-copy';
 import HeaderCopy from './modules/copy-blocks/header-copy';
 import SubscribePopUp from './modules/subscribePopUp';
 import SocialCopy from './modules/copy-blocks/social-copy';
@@ -22,9 +21,8 @@ mediaQueries.change('lg', message => console.log('Responsive ->', message));
 $(document).ready(() => {
   new SubscribeForm().init();
   new SubscribePopUp().init();
-
+  /* COPY BLOCKS */
   new VideoCopy().init();
-  new SubscribeCopy().init();
   new HeaderCopy().init();
   new SocialCopy().init();
   new InstagramCopy().init();
