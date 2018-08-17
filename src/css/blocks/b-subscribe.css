@@ -3,7 +3,6 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  border: 1px solid red;
 
   &__open {
     position: absolute;
@@ -13,7 +12,7 @@
     height: 3rem;
     color: #fff;
     background-color: transparent;
-    border: 1px solid red;
+    border: none;
   }
 
   &__close {
@@ -26,12 +25,13 @@
     height: 3rem;
     color: #fff;
     background-color: transparent;
-    border: 1px solid red;
+    border: none;
     transform: rotate(45deg);
   }
 
   &__main {
     position: fixed;
+    top: 0;
     z-index: 1000;
     display: none;
     width: 100vw;
@@ -40,7 +40,9 @@
     padding-right: 2rem;
     padding-left: 2rem;
     color: #fff;
-    background-color: var(--main-background-color);
+    background: var(--main-background-color) url('~/img/triangle.svg');
+    background-repeat: no-repeat;
+    background-position: 41vw 23vh;
     border: solid 10px #232126;
 
     &.--state-open {

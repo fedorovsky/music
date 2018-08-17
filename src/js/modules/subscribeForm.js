@@ -47,7 +47,7 @@ class SubscribeForm {
     });
   }
 
-  sendFrom(form) {
+  sendFrom = form => {
     const url = process.env.NODE_ENV === 'development' ?
       '//localhost:3000/api.php?action=subscribe' :
       '//theatomicguns.com/api.php?action=subscribe';
