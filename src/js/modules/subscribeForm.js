@@ -48,11 +48,19 @@ class SubscribeForm {
   }
 
   sendFrom(form) {
-    console.log(form, this);
+    const url = process.env.NODE_ENV === 'development' ?
+      '//localhost:3000/api.php?action=subscribe' :
+      '//theatomicguns.com/api.php?action=subscribe';
     $.ajax({
       type: 'POST',
-      url: 'http://theatomicguns.com/api.php?action=subscribe',
-      data: $(form).serialize(),
+      headers: {
+        'Target-URL': 'http://theatomicguns.com',
+      },
+      contentType: 'application/json',
+      url,
+      data: JSON.stringify({
+        email: $(form).find('#email').val(),
+      }),
       success(data) {
         console.log(data);
       },
