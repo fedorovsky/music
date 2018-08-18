@@ -8,17 +8,22 @@
   @media (--lg-only) {
     display: block;
   }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 944px;
+    margin: 0 auto;
+  }
+
+  .left {
+    flex: 0 1 320px;
+    max-width: 320px;
+  }
+
+  .right {
+    flex: 0 1 510px;
+    max-width: 510px;
+  }
 }
 
-.container {
-  display: flex;
-}
-
-.left {
-  flex: 1;
-  //max-width: 320px;
-}
-
-.right {
-  flex: 1;
-}

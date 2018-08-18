@@ -22,6 +22,6 @@
 
 .right {
   position: relative;
-  flex: 1;
+  flex: 0 1 320px;
 }
 

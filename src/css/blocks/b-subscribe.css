@@ -36,13 +36,13 @@
     display: none;
     width: 100vw;
     height: 100vh;
-    padding-top: 3rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-top: 87px;
+    padding-right: 20px;
+    padding-left: 50px;
     color: #fff;
-    background: var(--main-background-color) url('~/img/triangle.svg');
+    background: var(--main-background-color) url("~/img/triangle.svg");
     background-repeat: no-repeat;
-    background-position: 41vw 23vh;
+    background-position: 80% 30%;
     border: solid 10px #232126;
 
     &.--state-open {
@@ -74,12 +74,39 @@
     }
   }
 
+  &__form {
+    position: absolute;
+    max-width: 200px;
+
+    &::after {
+      position: absolute;
+      top: -13px;
+      left: -15px;
+      width: 11px;
+      height: 2px;
+      content: '';
+      background-color: #3a3b3d;
+    }
+
+    &::before {
+      position: absolute;
+      right: -15px;
+      bottom: -13px;
+      width: 11px;
+      height: 2px;
+      content: '';
+      background-color: #3a3b3d;
+    }
+  }
+
   &__label {
+    max-width: 178px;
     margin: 7rem 0 1rem;
-    font-size: 0.5rem;
+    font-size: 10px;
     font-weight: 700;
     line-height: 0.75rem;
     color: rgba(255, 255, 255, 0.71);
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.3px;
 
