@@ -10,6 +10,7 @@
 </head>
 
 <body class="root">
+
     <!-- Items that are copied -->
     ${require('./views/sections/header.html')}
     ${require('./views/sections/social.html')}
@@ -17,10 +18,19 @@
     ${require('./views/sections/instagram.html')}
     ${require('./views/sections/footer.html')}
     ${require('./views/partials/chord.html')}
+
     <!-- Responsive containers -->
     ${require('./views/containers/desktop.html')}
     ${require('./views/containers/tablet.html')}
     ${require('./views/containers/mobile.html')}
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
+
 
 </html>
