@@ -1,0 +1,23 @@
+.b-social {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3rem;
+  list-style-type: none;
+
+  &__item {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  &__lnk {
+    position: static;
+    font-size: 0.5rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+}
