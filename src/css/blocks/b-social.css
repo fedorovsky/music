@@ -1,7 +1,6 @@
 .b-social {
   padding: 0;
-  margin: 0;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem;
   list-style-type: none;
 
   &__item {
@@ -19,5 +18,9 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

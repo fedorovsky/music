@@ -36,7 +36,7 @@ class SubscribePopUp {
     const random = Math.floor(Math.random() * countPhrases) - 1;
     this.phrasesBox
       .children()
-      .eq(random)
+      .eq(random === -1 ? 0 : random)
       .show();
   }
 }

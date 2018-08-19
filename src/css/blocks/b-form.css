@@ -16,13 +16,19 @@
     }
 
     &.--type-error {
-      border-color: red;
+      border-color: #e35a59;
     }
   }
 
   &__error {
+    display: block;
+    padding-right: 15px;
+    padding-left: 15px;
     font-size: 13px;
-    color: red;
+    line-height: 24px;
+    color: #fff;
+    text-align: left;
+    background-color: #e35a59;
   }
 
   &__group {
