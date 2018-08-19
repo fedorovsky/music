@@ -11,6 +11,7 @@
     width: 3rem;
     height: 3rem;
     color: #fff;
+    cursor: pointer;
     background-color: transparent;
     border: none;
   }
@@ -24,6 +25,7 @@
     width: 3rem;
     height: 3rem;
     color: #fff;
+    cursor: pointer;
     background-color: transparent;
     border: none;
     transform: rotate(45deg);
@@ -40,9 +42,7 @@
     padding-right: 20px;
     padding-left: 50px;
     color: #fff;
-    background: var(--main-background-color) url("~/img/triangle.svg");
-    background-repeat: no-repeat;
-    background-position: 80% 30%;
+    background: var(--main-background-color) url("~/img/triangle.svg") no-repeat 80% 30%;
     border: solid 10px #232126;
 
     &.--state-open {

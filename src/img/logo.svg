@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="150px" height="108px" viewBox="0 0 150 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Home-Tablet" transform="translate(-479.000000, -63.000000)" fill="#FFFFFF">
-            <g id="Header" transform="translate(345.000000, -44.000000)">
+            <g  transform="translate(345.000000, -44.000000)">
                 <g id="TheAtomicGuns" transform="translate(134.000000, 107.000000)">
                     <path d="M63.770238,78.0594497 L63.770238,106.965793 C63.770238,108.317748 61.7424578,108.317748 61.7424578,106.965793 L61.7424578,78.0594497 C61.7424578,76.7074944 63.770238,76.7074944 63.770238,78.0594497 Z" id="Shape" fill-rule="nonzero"></path>
                     <path d="M90.6277095,78.0594497 L90.6277095,106.965793 C90.6277095,108.317748 88.5999292,108.317748 88.5999292,106.965793 L88.5999292,78.0594497 C88.5999292,76.7074944 90.6277095,76.7074944 90.6277095,78.0594497 Z" id="Shape" fill-rule="nonzero"></path>
