@@ -4,24 +4,28 @@
   @media (--sm-only) {
     display: block;
   }
-}
 
-.container {
-  display: flex;
+  .container {
+    display: flex;
 
-  @media (--sm-only) and (orientation: landscape) {
-    width: 768px;
-    margin: 0 auto;
+    @media (--sm-only) and (orientation: landscape) {
+      width: 768px;
+      margin: 0 auto;
+    }
+  }
+
+  .left {
+    position: relative;
+    flex: 1;
+  }
+
+  .right {
+    position: relative;
+    flex: 0 1 320px;
+  }
+
+  .right-main {
+    position: fixed;
+    width: 320px;
   }
 }
-
-.left {
-  position: relative;
-  flex: 1;
-}
-
-.right {
-  position: relative;
-  flex: 0 1 320px;
-}
-

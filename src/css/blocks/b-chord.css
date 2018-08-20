@@ -12,18 +12,6 @@
   }
 }
 
-@keyframes distance {
-  from {
-    margin-right: 24px;
-    margin-left: 24px;
-  }
-
-  to {
-    margin-right: 12px;
-    margin-left: 12px;
-  }
-}
-
 @keyframes first-string {
   from {
     transform: translateX(-50px);
@@ -83,7 +71,6 @@
     transform: translateX(0);
   }
 }
-
 
 .b-chord {
   position: absolute;

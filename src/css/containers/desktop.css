@@ -17,6 +17,7 @@
   }
 
   .left {
+    position: relative;
     flex: 0 1 320px;
     max-width: 320px;
   }
