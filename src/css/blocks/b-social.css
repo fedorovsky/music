@@ -1,22 +1,24 @@
 .b-social {
-  padding: 0;
-  margin: 0 0 3rem;
-  list-style-type: none;
+  &__list {
+    padding: 0;
+    margin: 0 0 3rem;
+    list-style-type: none;
 
-  @media (--xs-only) {
-    margin-bottom: 80px;
-  }
+    @media (--xs-only) {
+      margin-bottom: 80px;
+    }
 
-  @media (--lg-only) {
-    margin-bottom: 80px;
-  }
+    @media (--lg-only) {
+      margin-bottom: 80px;
+    }
 
-  @media (--md-only) {
-    margin-bottom: 80px;
-  }
+    @media (--md-only) {
+      margin-bottom: 80px;
+    }
 
-  @media (--sm-only) {
-    margin-bottom: 80px;
+    @media (--sm-only) {
+      margin-bottom: 80px;
+    }
   }
 
   &__item {

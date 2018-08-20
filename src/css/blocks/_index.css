@@ -1,4 +1,5 @@
 @import "b-chord.css";
+@import "b-header.css";
 @import "b-triangle.css";
 @import "b-logo.css";
 @import "b-footer-logo.css";
@@ -8,6 +9,7 @@
 @import "b-phrases.css";
 @import "b-btn.css";
 @import "b-form.css";
-@import "b-card.css";
-@import "b-gallery.css";
 @import "b-social.css";
+@import "b-instagram.css";
+@import "b-video.css";
+@import "b-footer.css";

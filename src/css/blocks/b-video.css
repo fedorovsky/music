@@ -1,0 +1,133 @@
+.b-video {
+  margin: 0 auto;
+  background-color: rgba(13, 13, 16, 0.3);
+
+  &::before {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    content: '';
+    background-image: linear-gradient(to bottom, rgba(13, 13, 16, 0), #0d0d10);
+    opacity: 0.7;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    content: '';
+    background-image: linear-gradient(to top, rgba(13, 13, 16, 0), #0d0d10);
+    opacity: 0.7;
+  }
+
+  @media (--xs-only) {
+    max-width: 248px;
+  }
+
+  @media (--sm-only) {
+    max-width: 248px;
+    margin-top: 110px;
+  }
+
+  @media (--md-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 20vh;
+  }
+
+  @media (--lg-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 20vh;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media (--xs-only) {
+      margin-bottom: 2.5rem;
+    }
+
+    @media (--md-only) {
+      width: 49%;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    @media (--lg-only) {
+      width: 49%;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &__video-wrap {
+    position: relative;
+    height: 0;
+    padding-top: 25px;
+    padding-bottom: 56.25%; /* 16:9 */
+    background-color: var(--main-background-color);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: -13px;
+      left: -15px;
+      width: 8px;
+      height: 8px;
+      content: '';
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &::before {
+      position: absolute;
+      right: -15px;
+      bottom: -13px;
+      width: 8px;
+      height: 8px;
+      content: '';
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__desc {
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    min-height: 25px;
+    padding: 0.25rem 0.5rem;
+    margin: 5px auto 0;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15px;
+    color: #fff;
+    letter-spacing: 0.2px;
+    background-color: #222025;
+  }
+}
