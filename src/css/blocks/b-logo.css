@@ -2,14 +2,14 @@
   position: absolute;
   top: 64px;
   left: 50%;
-  width: 150px;
-  height: 108px;
   margin: 0;
   background: url('~/img/logo.svg') no-repeat;
   transform: translateX(-50%);
 
   &__lnk {
     display: block;
+    width: 150px;
+    height: 108px;
     text-indent: -9999px;
   }
 }

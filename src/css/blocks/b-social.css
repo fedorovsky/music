@@ -3,24 +3,104 @@
   margin: 0 0 3rem;
   list-style-type: none;
 
+  @media (--lg-only) {
+    margin-top: 38px;
+  }
+
+  @media (--md-only) {
+    margin-top: 38px;
+  }
+
   &__item {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     text-align: center;
+
+    @media (--lg-only) {
+      height: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    @media (--md-only) {
+      height: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   &__lnk {
-    position: static;
-    font-size: 0.5rem;
-    font-weight: 700;
-    line-height: 1.25rem;
+    position: relative;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 25px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+    transition: font-size 0.2s;
+    will-change: transition;
 
-    &:hover {
-      text-decoration: underline;
+    @media (--lg-only) {
+      display: inline-block;
+      line-height: 30px;
+    }
+
+    @media (--md-only) {
+      display: inline-block;
+      line-height: 30px;
+    }
+
+    @media (--lg-only) {
+      &:hover {
+        font-size: 12px;
+
+        &::after {
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 15px;
+          height: 2px;
+          content: '';
+          background-color: #fff;
+        }
+
+        &::before {
+          position: absolute;
+          top: -2px;
+          right: 0;
+          width: 15px;
+          height: 2px;
+          content: '';
+          background-color: #fff;
+        }
+      }
+    }
+
+    @media (--md-only) {
+      &:hover {
+        font-size: 12px;
+
+        &::after {
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 15px;
+          height: 2px;
+          content: '';
+          background-color: #fff;
+        }
+
+        &::before {
+          position: absolute;
+          top: -2px;
+          right: 0;
+          width: 15px;
+          height: 2px;
+          content: '';
+          background-color: #fff;
+        }
+      }
     }
   }
 }

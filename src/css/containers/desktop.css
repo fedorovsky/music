@@ -1,17 +1,16 @@
 .desktop {
   display: none;
 
-  @media (--md-only) {
+  @media (--lg-only) {
     display: block;
   }
 
-  @media (--lg-only) {
+  @media (--md-only) {
     display: block;
   }
 
   .container {
     display: flex;
-    justify-content: space-between;
     max-width: 944px;
     margin: 0 auto;
   }
@@ -20,6 +19,14 @@
     position: relative;
     flex: 0 1 320px;
     max-width: 320px;
+    height: 100vh;
+    margin-right: 75px;
+  }
+
+  .left-main {
+    position: fixed;
+    width: 320px;
+    height: 100%;
   }
 
   .right {

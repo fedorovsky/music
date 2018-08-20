@@ -1,3 +1,15 @@
 .footer {
   padding-top: 1rem;
+
+  @media (--lg-only) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (--md-only) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
