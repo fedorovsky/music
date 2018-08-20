@@ -1,4 +1,4 @@
 .b-triangle {
-  position: static;
+  position: relative;
   text-align: center;
 }
