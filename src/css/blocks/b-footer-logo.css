@@ -2,6 +2,14 @@
   position: relative;
   text-align: center;
 
+  @media (--lg-only) and (max-height: 700px) {
+    display: none;
+  }
+
+  @media (--md-only) and (max-height: 700px) {
+    display: none;
+  }
+
   &__lnk {
     display: block;
   }

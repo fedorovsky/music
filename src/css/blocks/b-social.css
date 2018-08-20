@@ -8,15 +8,15 @@
   }
 
   @media (--lg-only) {
-    margin-top: 38px;
+    margin-bottom: 80px;
   }
 
   @media (--md-only) {
-    margin-top: 38px;
+    margin-bottom: 80px;
   }
 
   @media (--sm-only) {
-    margin-bottom: 4rem;
+    margin-bottom: 80px;
   }
 
   &__item {
@@ -29,15 +29,11 @@
     }
 
     @media (--lg-only) {
-      height: 30px;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      height: 25px;
     }
 
     @media (--md-only) {
-      height: 30px;
-      margin-top: 15px;
-      margin-bottom: 15px;
+      height: 25px;
     }
   }
 
@@ -50,8 +46,33 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    transition: font-size 0.2s;
     will-change: transition;
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: -10px;
+      width: 15px;
+      height: 2px;
+      content: '';
+      background-color: #fff;
+      opacity: 0;
+      transition: all 0.3s ease;
+      transform: translateX(15px);
+    }
+
+    &::before {
+      position: absolute;
+      top: -2px;
+      right: -10px;
+      width: 15px;
+      height: 2px;
+      content: '';
+      background-color: #fff;
+      opacity: 0;
+      transition: all 0.3s ease;
+      transform: translateX(-15px);
+    }
 
     @media (--lg-only) {
       display: inline-block;
@@ -65,52 +86,28 @@
 
     @media (--lg-only) {
       &:hover {
-        font-size: 12px;
-
         &::after {
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 15px;
-          height: 2px;
-          content: '';
-          background-color: #fff;
+          opacity: 1;
+          transform: translateX(0);
         }
 
         &::before {
-          position: absolute;
-          top: -2px;
-          right: 0;
-          width: 15px;
-          height: 2px;
-          content: '';
-          background-color: #fff;
+          opacity: 1;
+          transform: translateX(0);
         }
       }
     }
 
     @media (--md-only) {
       &:hover {
-        font-size: 12px;
-
         &::after {
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 15px;
-          height: 2px;
-          content: '';
-          background-color: #fff;
+          opacity: 1;
+          transform: translateX(0);
         }
 
         &::before {
-          position: absolute;
-          top: -2px;
-          right: 0;
-          width: 15px;
-          height: 2px;
-          content: '';
-          background-color: #fff;
+          opacity: 1;
+          transform: translateX(0);
         }
       }
     }

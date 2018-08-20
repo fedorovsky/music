@@ -1,6 +1,14 @@
 .footer {
   padding-top: 1rem;
 
+  @media (--lg-only) and (max-height: 580px) {
+    display: none;
+  }
+
+  @media (--md-only) and (max-height: 580px) {
+    display: none;
+  }
+
   @media (--lg-only) {
     position: absolute;
     bottom: 0;

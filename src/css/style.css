@@ -21,10 +21,6 @@
 html {
   font-family: "Montserrat", "MuseoSans", sans-serif;
   font-size: 20px;
-
-  @media (--lg-only) {
-    font-size: 24px;
-  }
 }
 
 body {
