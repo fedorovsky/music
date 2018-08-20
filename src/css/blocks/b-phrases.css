@@ -1,4 +1,5 @@
 .b-phrases {
+  max-width: 220px;
   padding: 0;
   margin: 0 auto;
   list-style: none;
@@ -8,7 +9,8 @@
     margin: 0;
     font-size: 15px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 500;
+    line-height: 20px;
     color: #c7a266;
     text-align: left;
     letter-spacing: 0.3px;

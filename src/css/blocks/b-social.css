@@ -3,6 +3,10 @@
   margin: 0 0 3rem;
   list-style-type: none;
 
+  @media (--xs-only) {
+    margin-bottom: 80px;
+  }
+
   @media (--lg-only) {
     margin-top: 38px;
   }
@@ -11,10 +15,18 @@
     margin-top: 38px;
   }
 
+  @media (--sm-only) {
+    margin-bottom: 4rem;
+  }
+
   &__item {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     text-align: center;
+
+    @media (--xs-only) {
+      height: 25px;
+    }
 
     @media (--lg-only) {
       height: 30px;

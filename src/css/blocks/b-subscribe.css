@@ -6,6 +6,7 @@
 
   &__open {
     position: absolute;
+    top: 8px;
     right: 0;
     display: inline-block;
     width: 3rem;
@@ -29,7 +30,7 @@
 
   &__close {
     position: absolute;
-    top: -10px;
+    top: -2px;
     right: -10px;
     z-index: 1000;
     display: inline-block;
@@ -50,10 +51,10 @@
     width: 100vw;
     height: 100vh;
     padding-top: 87px;
-    padding-right: 20px;
+    padding-right: 50px;
     padding-left: 50px;
     color: #fff;
-    background: var(--main-background-color) url("~/img/triangle.svg") no-repeat 80% 30%;
+    background-color: var(--main-background-color);
     border: solid 10px #232126;
 
     &.--state-open {
@@ -86,35 +87,41 @@
   }
 
   &__form {
-    position: absolute;
-    max-width: 200px;
+    position: relative;
+    max-width: 220px;
+    margin: auto;
 
     &::after {
       position: absolute;
-      top: -13px;
-      left: -15px;
-      width: 11px;
-      height: 2px;
+      top: -11px;
+      left: -11px;
+      width: 8px;
+      height: 8px;
       content: '';
-      background-color: #3a3b3d;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     &::before {
       position: absolute;
-      right: -15px;
-      bottom: -13px;
-      width: 11px;
-      height: 2px;
+      right: -11px;
+      bottom: -11px;
+      width: 8px;
+      height: 8px;
       content: '';
-      background-color: #3a3b3d;
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
   }
 
   &__label {
-    max-width: 178px;
+    max-width: 220px;
+    padding-right: 1rem;
     margin: 7rem 0 1rem;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 0.75rem;
     color: rgba(255, 255, 255, 0.71);
     text-align: left;

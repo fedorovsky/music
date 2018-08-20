@@ -1,7 +1,9 @@
 .b-btn {
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 0.5rem;
   font-weight: bold;
-  line-height: 1.5rem;
+  line-height: 35px;
   color: #0b0b0c;
   text-align: center;
   letter-spacing: 2px;

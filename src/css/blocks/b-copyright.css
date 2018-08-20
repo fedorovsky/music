@@ -2,13 +2,27 @@
   margin-top: 1.5rem;
   text-align: center;
 
+  @media (--sm-only) {
+    margin-top: 3px;
+  }
+
   &__text {
     display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 10px;
     font-weight: 300;
-    line-height: 1rem;
+    line-height: 25px;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 0.4px;
     background-color: #000;
+
+    @media (--xs-only) {
+      margin-bottom: 2rem;
+    }
+
+    @media (--sm-only) {
+      margin: 0;
+    }
   }
 }
