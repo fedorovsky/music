@@ -1,6 +1,5 @@
 .b-video {
   margin: 0 auto;
-  background-color: rgba(13, 13, 16, 0.3);
 
   &::before {
     position: absolute;

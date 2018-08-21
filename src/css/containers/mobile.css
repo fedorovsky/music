@@ -2,6 +2,7 @@
   display: none;
 
   @media (--xs-only) {
+    position: relative;
     display: block;
   }
 }

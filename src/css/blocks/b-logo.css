@@ -4,6 +4,7 @@
   left: 50%;
   margin: 0;
   background: url('~/img/logo.svg') no-repeat;
+  background-size: 98%;
   transform: translateX(-50%);
 
   &__lnk {

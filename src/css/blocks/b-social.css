@@ -76,6 +76,10 @@
       transform: translateX(-15px);
     }
 
+    @media (--xs-only) {
+      font-size: 11px;
+    }
+
     @media (--lg-only) {
       display: inline-block;
       line-height: 30px;
