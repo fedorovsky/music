@@ -1,4 +1,7 @@
 .b-social {
+  position: relative;
+  z-index: 100;
+
   &__list {
     padding: 0;
     margin: 0 0 3rem;
@@ -78,6 +81,7 @@
 
     @media (--xs-only) {
       font-size: 11px;
+      font-weight: 600;
     }
 
     @media (--lg-only) {

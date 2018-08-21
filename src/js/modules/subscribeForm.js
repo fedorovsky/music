@@ -4,6 +4,7 @@ import 'jquery-validation';
 class SubscribeForm {
   init() {
     this.form = $('#subscribe-form');
+    this.successMessage = $('#success-message');
     this.initValidator();
     this.handlers();
   }
@@ -36,8 +37,8 @@ class SubscribeForm {
       },
       messages: {
         email: {
-          required: 'Error Required',
-          email: 'Error Email',
+          required: 'Обов’язкове поле',
+          email: 'Помилка в адресі',
         },
       },
       submitHandler(form, e) {
@@ -48,6 +49,7 @@ class SubscribeForm {
   }
 
   sendFrom = form => {
+    const self = this;
     const url = process.env.NODE_ENV === 'development' ?
       '//localhost:3000/api.php?action=subscribe' :
       '//theatomicguns.com/api.php?action=subscribe';
@@ -62,9 +64,15 @@ class SubscribeForm {
         email: $(form).find('#email').val(),
       }),
       success(data) {
-        console.log(data);
+        console.log(data, self);
+        self.showSuccessLabel();
       },
     });
+  };
+
+  showSuccessLabel() {
+    this.form.hide();
+    this.successMessage.show();
   }
 }
 

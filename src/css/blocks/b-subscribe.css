@@ -50,7 +50,7 @@
     padding-left: 50px;
     color: #fff;
     background-color: var(--main-background-color);
-    border: solid 10px #232126;
+    border: solid 10px #17181d;
 
     &.--state-open {
       display: block;
@@ -82,37 +82,38 @@
   }
 
   &__form {
-    position: relative;
-    max-width: 220px;
+    position: absolute;
+    bottom: 80px;
+    width: 200px;
     margin: auto;
 
-    &::after {
-      position: absolute;
-      top: -11px;
-      left: -11px;
-      width: 8px;
-      height: 8px;
-      content: '';
-      border-top: 2px solid rgba(255, 255, 255, 0.2);
-      border-left: 2px solid rgba(255, 255, 255, 0.2);
+    @media (--xs-only) {
+      position: relative;
+      display: block;
+      width: 220px;
+      margin: 250px auto 0;
     }
+  }
 
-    &::before {
-      position: absolute;
-      right: -11px;
-      bottom: -11px;
-      width: 8px;
-      height: 8px;
-      content: '';
-      border-right: 2px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    }
+  &__success {
+    display: none;
+    padding: 0 15px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #000;
+    border: solid 2px rgba(136, 255, 9, 0.25);
+    border-radius: 0;
+    outline: none;
   }
 
   &__label {
     max-width: 220px;
     padding-right: 1rem;
     margin: 7rem auto 1rem;
+    margin-top: 0;
     font-size: 10px;
     font-weight: 500;
     line-height: 0.75rem;
@@ -120,6 +121,11 @@
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+
+    &.--type-success {
+      display: none;
+      color: green;
+    }
 
     @media (--xs-only) and (orientation: landscape) {
       margin-top: 1rem;

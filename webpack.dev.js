@@ -136,8 +136,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, 'src/about.html'),
-      filename: path.resolve(__dirname, 'public/about.html'),
+      template: path.resolve(__dirname, 'src/privacy.html'),
+      filename: path.resolve(__dirname, 'public/privacy.html'),
       alwaysWriteToDisk: true,
     }),
   ],

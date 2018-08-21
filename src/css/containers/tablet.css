@@ -26,9 +26,6 @@
     position: fixed;
     width: 320px;
     height: 100%;
-
-    @media (--sm-only) and (orientation: landscape) {
-      overflow: scroll;
-    }
+    overflow: scroll;
   }
 }

@@ -27,6 +27,7 @@
     position: fixed;
     width: 320px;
     height: 100%;
+    transform: translateZ(1px);
   }
 
   .right {

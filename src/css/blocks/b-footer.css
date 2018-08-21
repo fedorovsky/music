@@ -21,4 +21,12 @@
     bottom: 0;
     width: 100%;
   }
+
+  @media (--sm-only) {
+    padding-top: 3rem;
+  }
+
+  @media (--xs-only) {
+    padding-top: 3rem;
+  }
 }

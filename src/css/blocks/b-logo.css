@@ -3,8 +3,8 @@
   top: 64px;
   left: 50%;
   margin: 0;
-  background: url('~/img/logo.svg') no-repeat;
-  background-size: 98%;
+  background: url('~/img/logo.svg') no-repeat 1px 0;
+  background-size: 97.25%;
   transform: translateX(-50%);
 
   &__lnk {

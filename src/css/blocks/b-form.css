@@ -1,4 +1,38 @@
 .b-form {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &::before {
+    position: absolute;
+    right: -11px;
+    bottom: -11px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &.--type-success {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
   &__input {
     padding: 0 15px;
     font-size: 13px;
