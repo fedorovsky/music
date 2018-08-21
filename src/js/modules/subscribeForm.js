@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import 'jquery-validation';
 
+$.validator.addMethod('email', value => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value), 'Помилка в адресі');
+
 class SubscribeForm {
   init() {
     this.form = $('#subscribe-form');
@@ -14,10 +16,6 @@ class SubscribeForm {
       this.form.validate().showErrors({
         email: 'Server error',
       });
-    });
-
-    $('#copy').on('click', () => {
-      $('#one').append(this.form);
     });
   }
 
@@ -63,14 +61,20 @@ class SubscribeForm {
       data: JSON.stringify({
         email: $(form).find('#email').val(),
       }),
-      success(data) {
-        console.log(data, self);
-        self.showSuccessLabel();
+      success(response) {
+        const data = JSON.parse(response);
+        if (data.status === 1) {
+          self.showSuccessMessage();
+        } else {
+          self.form.validate().showErrors({
+            email: data.status_message,
+          });
+        }
       },
     });
   };
 
-  showSuccessLabel() {
+  showSuccessMessage() {
     this.form.hide();
     this.successMessage.show();
   }

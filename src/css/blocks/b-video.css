@@ -93,6 +93,7 @@
         &::before {
           display: none;
         }
+
         &::after {
           display: block;
         }
