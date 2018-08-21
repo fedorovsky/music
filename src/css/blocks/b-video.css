@@ -91,8 +91,8 @@
       width: 8px;
       height: 8px;
       content: '';
-      border-top: 2px solid rgba(255, 255, 255, 0.2);
-      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      border-top: 2px solid rgba(255, 255, 255, 0.15);
+      border-left: 2px solid rgba(255, 255, 255, 0.15);
     }
 
     &::before {
@@ -102,8 +102,8 @@
       width: 8px;
       height: 8px;
       content: '';
-      border-right: 2px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      border-right: 2px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     }
 
     iframe {
