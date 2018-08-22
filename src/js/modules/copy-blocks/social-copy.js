@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import MediaQueries from '../mediaQueries';
+import MediaQueries from '../media-queries';
 
 const mediaQueries = new MediaQueries();
 
@@ -14,19 +14,19 @@ class SocialCopy {
   }
 
   handlers() {
-    mediaQueries.change('xs', () => {
+    mediaQueries.match('xs', () => {
       this.copySocialMobile();
     });
 
-    mediaQueries.change('sm', () => {
+    mediaQueries.match('sm', () => {
       this.copySocialTablet();
     });
 
-    mediaQueries.change('md', () => {
+    mediaQueries.match('md', () => {
       this.copySocialDesktop();
     });
 
-    mediaQueries.change('lg', () => {
+    mediaQueries.match('lg', () => {
       this.copySocialDesktop();
     });
   }

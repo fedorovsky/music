@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import MediaQueries from '../mediaQueries';
+import MediaQueries from '../media-queries';
 
 const mediaQueries = new MediaQueries();
 
@@ -14,19 +14,19 @@ class InstagramCopy {
   }
 
   handlers() {
-    mediaQueries.change('xs', () => {
+    mediaQueries.match('xs', () => {
       this.copyInstagramMobile();
     });
 
-    mediaQueries.change('sm', () => {
+    mediaQueries.match('sm', () => {
       this.copyInstagramTablet();
     });
 
-    mediaQueries.change('md', () => {
+    mediaQueries.match('md', () => {
       this.copyInstagramDesktop();
     });
 
-    mediaQueries.change('lg', () => {
+    mediaQueries.match('lg', () => {
       this.copyInstagramDesktop();
     });
   }

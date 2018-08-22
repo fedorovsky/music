@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import MediaQueries from '../mediaQueries';
+import MediaQueries from '../media-queries';
 
 const mediaQueries = new MediaQueries();
 
@@ -14,19 +14,19 @@ class FooterCopy {
   }
 
   handlers() {
-    mediaQueries.change('xs', () => {
+    mediaQueries.match('xs', () => {
       this.copyFooterMobile();
     });
 
-    mediaQueries.change('sm', () => {
+    mediaQueries.match('sm', () => {
       this.copyFooterTablet();
     });
 
-    mediaQueries.change('md', () => {
+    mediaQueries.match('md', () => {
       this.copyFooterDesktop();
     });
 
-    mediaQueries.change('lg', () => {
+    mediaQueries.match('lg', () => {
       this.copyFooterDesktop();
     });
   }

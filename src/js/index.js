@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import MediaQueries from './modules/mediaQueries';
-import SubscribeForm from './modules/subscribeForm';
+import MediaQueries from './modules/media-queries';
+import SubscribeForm from './modules/subscribe-form';
 import VideoCopy from './modules/copy-blocks/video-copy';
 import HeaderCopy from './modules/copy-blocks/header-copy';
-import SubscribePopUp from './modules/subscribePopUp';
+import SubscribePopup from './modules/subscribe-popup';
 import SocialCopy from './modules/copy-blocks/social-copy';
 import InstagramCopy from './modules/copy-blocks/instagram-copy';
 import FooterCopy from './modules/copy-blocks/footer-copy';
@@ -12,15 +12,15 @@ import '../css/style.css';
 
 const mediaQueries = new MediaQueries();
 
-mediaQueries.change('xs', message => console.log('Responsive ->', message));
-mediaQueries.change('sm', message => console.log('Responsive ->', message));
-mediaQueries.change('md', message => console.log('Responsive ->', message));
-mediaQueries.change('lg', message => console.log('Responsive ->', message));
+mediaQueries.match('xs', message => console.log('Responsive ->', message));
+mediaQueries.match('sm', message => console.log('Responsive ->', message));
+mediaQueries.match('md', message => console.log('Responsive ->', message));
+mediaQueries.match('lg', message => console.log('Responsive ->', message));
 
 
 $(document).ready(() => {
   new SubscribeForm().init();
-  new SubscribePopUp().init();
+  new SubscribePopup().init();
   /* COPY BLOCKS */
   new VideoCopy().init();
   new HeaderCopy().init();

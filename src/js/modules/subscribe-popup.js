@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class SubscribePopUp {
+class SubscribePopup {
   init() {
     this.subscribeBox = $('#subscribe-main');
     this.btnOpenSubscribe = $('#subscribe-open');
@@ -33,12 +33,12 @@ class SubscribePopUp {
 
   showRandomPhrase() {
     const countPhrases = this.phrasesBox.children().length;
-    const random = Math.floor(Math.random() * countPhrases) - 1;
+    const random = Math.floor(Math.random() * countPhrases);
     this.phrasesBox
       .children()
-      .eq(random === -1 ? 0 : random)
+      .eq(random)
       .show();
   }
 }
 
-export default SubscribePopUp;
+export default SubscribePopup;

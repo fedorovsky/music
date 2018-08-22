@@ -10,7 +10,7 @@ class MediaQueries {
     this.lg = window.matchMedia('only screen and (min-width: 1441px)');
   }
 
-  change(name, callback) {
+  match(name, callback) {
     switch (name) {
       case 'xs': this.enterXS(callback);
         break;

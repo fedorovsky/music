@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import MediaQueries from '../mediaQueries';
+import MediaQueries from '../media-queries';
 
 const mediaQueries = new MediaQueries();
 
@@ -14,19 +14,19 @@ class ChordCopy {
   }
 
   handlers() {
-    mediaQueries.change('xs', () => {
+    mediaQueries.match('xs', () => {
       this.copyChordMobile();
     });
 
-    mediaQueries.change('sm', () => {
+    mediaQueries.match('sm', () => {
       this.copyChordTablet();
     });
 
-    mediaQueries.change('md', () => {
+    mediaQueries.match('md', () => {
       this.copyChordDesktop();
     });
 
-    mediaQueries.change('lg', () => {
+    mediaQueries.match('lg', () => {
       this.copyChordDesktop();
     });
   }

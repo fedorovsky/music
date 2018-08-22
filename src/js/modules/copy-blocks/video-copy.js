@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import MediaQueries from '../mediaQueries';
+import MediaQueries from '../media-queries';
 
 const mediaQueries = new MediaQueries();
 
@@ -14,19 +14,19 @@ class VideoCopy {
   }
 
   handlers() {
-    mediaQueries.change('xs', () => {
+    mediaQueries.match('xs', () => {
       this.copyVideoMobile();
     });
 
-    mediaQueries.change('sm', () => {
+    mediaQueries.match('sm', () => {
       this.copyVideoTablet();
     });
 
-    mediaQueries.change('md', () => {
+    mediaQueries.match('md', () => {
       this.copyVideoDesktop();
     });
 
-    mediaQueries.change('lg', () => {
+    mediaQueries.match('lg', () => {
       this.copyVideoDesktop();
     });
   }
