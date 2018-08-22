@@ -16,6 +16,8 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 
     &:hover {
       .icon-open {
@@ -37,6 +39,7 @@
     background-color: transparent;
     border: none;
     transform: rotate(45deg);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   &__main {
