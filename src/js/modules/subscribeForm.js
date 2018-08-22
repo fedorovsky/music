@@ -36,7 +36,7 @@ class SubscribeForm {
       messages: {
         email: {
           required: 'Обов’язкове поле',
-          email: 'Помилка в адресі',
+          email: 'Некоректний e-mail',
         },
       },
       submitHandler(form, e) {
