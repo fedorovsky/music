@@ -18,14 +18,21 @@
 
   .right {
     position: relative;
-    flex: 0 1 320px;
+    flex: 0 0 320px;
     height: 100vh;
+    overflow: hidden;
   }
 
   .right-main {
     position: fixed;
     width: 320px;
     height: 100%;
-    overflow: scroll;
+    margin-right: -14px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 }

@@ -1,22 +1,13 @@
 import $ from 'jquery';
 import 'jquery-validation';
 
-$.validator.addMethod('email', value => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value), 'Помилка в адресі');
+$.validator.addMethod('email', value => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value), 'Некоректний e-mail');
 
 class SubscribeForm {
   init() {
     this.form = $('#subscribe-form');
     this.successMessage = $('#success-message');
     this.initValidator();
-    this.handlers();
-  }
-
-  handlers() {
-    $('#test').on('click', () => {
-      this.form.validate().showErrors({
-        email: 'Server error',
-      });
-    });
   }
 
   initValidator() {
