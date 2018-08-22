@@ -125,6 +125,10 @@
       @media (--xs-only) {
         transform: translateX(-50%) translateY(417px) rotate(45deg);
       }
+
+      @media (--sm-only) {
+        transform: translateX(-50%) translateY(389px) rotate(45deg);
+      }
     }
 
     &.--third {
@@ -132,6 +136,10 @@
 
       @media (--xs-only) {
         transform: translateX(-50%) translateY(297px) rotate(45deg);
+      }
+
+      @media (--sm-only) {
+        transform: translateX(-50%) translateY(263px) rotate(45deg);
       }
     }
 
@@ -141,6 +149,10 @@
       @media (--xs-only) {
         transform: translateX(-50%) translateY(376px) rotate(45deg);
       }
+
+      @media (--sm-only) {
+        transform: translateX(-50%) translateY(346px) rotate(45deg);
+      }
     }
 
     &.--fifth {
@@ -148,6 +160,10 @@
 
       @media (--xs-only) {
         transform: translateX(-50%) translateY(253px) rotate(45deg);
+      }
+
+      @media (--sm-only) {
+        transform: translateX(-50%) translateY(219px) rotate(45deg);
       }
     }
 
