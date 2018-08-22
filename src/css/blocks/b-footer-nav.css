@@ -1,8 +1,26 @@
+@keyframes move-footer-nav {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .b-footer-nav {
   padding: 0;
   margin: 0.5rem 0 0;
   text-align: center;
   list-style-type: none;
+  opacity: 0;
+  animation-name: move-footer-nav;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 
   &__item {
     display: block;

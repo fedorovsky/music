@@ -1,19 +1,23 @@
 @keyframes first-string {
   from {
+    opacity: 0.3;
     transform: translateX(-50px);
   }
 
   to {
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes second-string {
   from {
+    opacity: 0.6;
     transform: translateX(-30px);
   }
 
   to {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -40,20 +44,24 @@
 
 @keyframes fifth-string {
   from {
+    opacity: 06;
     transform: translateX(30px);
   }
 
   to {
+    opacity: 1;
     transform: translateX(0);
   }
 }
 
 @keyframes sixth-string {
   from {
+    opacity: 0.3;
     transform: translateX(50px);
   }
 
   to {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -191,7 +199,7 @@
       left: 50%;
       z-index: 1000;
       width: 200%;
-      height: calc(100% - 150px);
+      height: 100%;
       background-image: linear-gradient(to bottom, rgba(11, 11, 12, 0), rgba(11, 11, 12, 1));
       opacity: 0.7;
       transform: translateX(-50%);

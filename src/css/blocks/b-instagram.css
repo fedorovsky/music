@@ -1,3 +1,27 @@
+@keyframes move-instagram-desktop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes move-instagram-tablet {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .b-instagram {
   position: relative;
 
@@ -5,14 +29,36 @@
     margin-top: 4rem;
   }
 
+  @media (--sm-only) {
+    margin-top: 3rem;
+    opacity: 0;
+    animation-name: move-instagram-tablet;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+  }
+
   @media (--md-only) {
     margin-top: 3rem;
     margin-bottom: 6rem;
+    opacity: 0;
+    animation-name: move-instagram-desktop;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 
   @media (--lg-only) {
     margin-top: 3rem;
     margin-bottom: 6rem;
+    opacity: 0;
+    animation-name: move-instagram-desktop;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
   }
 
   &::before {

@@ -1,7 +1,61 @@
+@keyframes move-video-mobile {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-video-desktop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .b-video {
   position: relative;
   margin: 0 auto;
   background-color: rgba(11, 11, 12, 0.6);
+  opacity: 1;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  @media (--xs-only) {
+    opacity: 0;
+    animation-name: move-video-mobile;
+  }
+
+  @media (--sm-only) {
+    opacity: 0;
+    animation-name: move-video-desktop;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (--md-only) {
+    opacity: 0;
+    animation-name: move-video-desktop;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (--lg-only) {
+    opacity: 0;
+    animation-name: move-video-desktop;
+    animation-delay: 2s;
+  }
 
   &::before {
     position: absolute;

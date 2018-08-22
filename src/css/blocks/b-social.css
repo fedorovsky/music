@@ -1,3 +1,63 @@
+@keyframes first-move {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes second-move {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes third-move {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fourth-move {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fifth-move {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .b-social {
   position: relative;
   z-index: 100;
@@ -28,6 +88,32 @@
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     text-align: center;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    will-change: transform;
+    animation-fill-mode: forwards;
+
+    &:nth-child(1) {
+      animation-name: first-move;
+    }
+
+    &:nth-child(2) {
+      animation-name: second-move;
+    }
+
+    &:nth-child(3) {
+      animation-name: third-move;
+    }
+
+    &:nth-child(4) {
+      animation-name: fourth-move;
+    }
+
+    &:nth-child(5) {
+      animation-name: fifth-move;
+    }
 
     @media (--xs-only) {
       height: 25px;

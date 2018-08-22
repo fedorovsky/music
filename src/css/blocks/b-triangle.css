@@ -1,4 +1,16 @@
+@keyframes triangle {
+  from {
+    transform: rotate(-8deg) translateY(-15px);
+  }
+
+  to {
+    transform: rotate(0) translateY(0);
+  }
+}
+
 .b-triangle {
   position: relative;
-  text-align: center;
+  animation-name: triangle;
+  animation-duration: 2s;
+  animation-timing-function: ease;
 }

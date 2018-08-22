@@ -1,3 +1,12 @@
+@keyframes move {
+  from {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 .b-logo {
   position: absolute;
   top: 64px;
@@ -6,6 +15,10 @@
   background: url('~/img/logo.svg') no-repeat 1px 0;
   background-size: 97.25%;
   transform: translateX(-50%);
+  animation-name: move;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 
   &__lnk {
     display: block;
