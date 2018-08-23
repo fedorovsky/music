@@ -4,7 +4,7 @@
   text-align: center;
 
   @media (--xs-only) {
-    padding-bottom: 35px;
+    padding-bottom: 25px;
   }
 
   @media (--sm-only) {

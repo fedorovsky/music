@@ -58,6 +58,18 @@
   }
 }
 
+@keyframes sixth-move {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .b-social {
   position: relative;
   z-index: 100;
@@ -68,7 +80,7 @@
     list-style-type: none;
 
     @media (--xs-only) {
-      margin-bottom: 80px;
+      margin-bottom: 70px;
     }
 
     @media (--lg-only) {
@@ -113,6 +125,10 @@
 
     &:nth-child(5) {
       animation-name: fifth-move;
+    }
+
+    &:nth-child(6) {
+      animation-name: sixth-move;
     }
 
     @media (--xs-only) {

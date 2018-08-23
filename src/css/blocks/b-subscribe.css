@@ -48,7 +48,7 @@
     display: none;
     width: 100vw;
     height: 100vh;
-    padding-top: 87px;
+    padding-top: 10vh;
     padding-right: 50px;
     padding-left: 50px;
     color: #fff;
@@ -94,7 +94,7 @@
       position: relative;
       display: block;
       width: 220px;
-      margin: 250px auto 0;
+      margin: 30vh auto 0;
     }
   }
 
