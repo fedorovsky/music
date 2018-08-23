@@ -102,16 +102,6 @@ module.exports = {
       env: true,
     },
   },
-  resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      path.resolve(__dirname, 'src/js'),
-      path.resolve(__dirname, 'node_modules'),
-    ],
-    alias: {
-      'react-select-friendly': path.join(__dirname, '.', 'src', 'index'),
-    },
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

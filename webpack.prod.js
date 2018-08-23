@@ -82,13 +82,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      path.resolve(__dirname, 'src/js'),
-      path.resolve(__dirname, 'node_modules'),
-    ],
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
