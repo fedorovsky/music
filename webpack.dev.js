@@ -145,5 +145,17 @@ module.exports = {
       filename: path.resolve(__dirname, 'public/privacy.html'),
       alwaysWriteToDisk: true,
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve(__dirname, 'src/404.html'),
+      filename: path.resolve(__dirname, 'public/404.html'),
+      alwaysWriteToDisk: true,
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.resolve(__dirname, 'src/500.html'),
+      filename: path.resolve(__dirname, 'public/500.html'),
+      alwaysWriteToDisk: true,
+    }),
   ],
 };
