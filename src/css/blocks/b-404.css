@@ -1,3 +1,21 @@
 .b-404 {
+  width: 250px;
+  margin: 20vh auto 0;
+  text-align: center;
 
+  &__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.71);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
 }
