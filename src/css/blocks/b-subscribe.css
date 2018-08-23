@@ -18,10 +18,9 @@
     border: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-
     &:hover {
       .icon-open {
-        fill: rgba(255, 255, 255, 0.4);
+        fill: #d3b688;
       }
     }
   }
