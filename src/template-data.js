@@ -1,4 +1,5 @@
 module.exports = {
+  pageTitle: 'The Atomic Guns',
   social: {
     navigation: [
       {
@@ -62,17 +63,17 @@ module.exports = {
         link: 'https://www.instagram.com/theatomicguns/',
       },
       {
-        src: '../../img/photo-1.jpg',
+        src: '../../img/photo-2.jpg',
         alt: 'photo',
         link: 'https://www.instagram.com/theatomicguns/',
       },
       {
-        src: '../../img/photo-1.jpg',
+        src: '../../img/photo-3.jpg',
         alt: 'photo',
         link: 'https://www.instagram.com/theatomicguns/',
       },
       {
-        src: '../../img/photo-1.jpg',
+        src: '../../img/photo-4.jpg',
         alt: 'photo',
         link: 'https://www.instagram.com/theatomicguns/',
       },
@@ -92,12 +93,12 @@ module.exports = {
     ],
   },
   notFound: {
-    title: 'Not Found',
+    pageTitle: 'Not Found',
     description: 'сторiнка не знайдена',
     button: 'на головну',
   },
   serverError: {
-    title: 'Server Error',
+    pageTitle: 'Server Error',
     description: 'Помилка сервер',
     button: 'на головну',
   },

@@ -5,7 +5,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const templateParameters = require('./src/data.js');
+const templateParameters = require('./src/template-data.js');
 
 process.env.NODE_ENV = 'production';
 process.env.BABEL_ENV = 'production';

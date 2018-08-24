@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title><%= serverError.title %></title>
+  <title><%= serverError.pageTitle %></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#0b0b0c">
@@ -18,7 +18,7 @@
 
 <body>
 <div class="b-500">
-  <img class="b-500__logo" src="${require('./img/triangle.svg')}" alt="">
+  <img class="b-500__logo" src="./img/triangle.svg" alt="">
   <p class="b-500__text"><%= serverError.description %></p>
   <a href="/" class="b-btn --with-angle --size-wide"><%= serverError.button %></a>
 </div>
