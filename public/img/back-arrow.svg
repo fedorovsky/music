@@ -1,1 +1,11 @@
-<svg width="21" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#0B0B0C" d="M-24-30h320v1780H-24z"/><path d="M21 6.25H4.694l4.447-4.5L7.411 0 0 7.5 7.412 15l1.73-1.75-4.448-4.5H21z" fill="#C7A266" fill-rule="nonzero"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-24.000000, -30.000000)">
+            <rect fill="#0B0B0C" x="0" y="0" width="320" height="1780"></rect>
+            <g id="enter-arrow" transform="translate(24.000000, 30.000000)" fill="#C7A266" fill-rule="nonzero">
+                <polygon id="Shape" points="21 6.25 4.69411765 6.25 9.14117647 1.75 7.41176471 0 0 7.5 7.41176471 15 9.14117647 13.25 4.69411765 8.75 21 8.75"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

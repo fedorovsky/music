@@ -16,6 +16,10 @@
     <meta name=“msapplication-TileColor” content=“#da532c”>
 </head>
 
+<%
+    var data = require('./data.js')
+%>
+
 <body>
     <!-- Containers -->
     <div id="containers">
@@ -25,12 +29,12 @@
     </div>
     <!-- Sources -->
     <div id="sources">
-        <%= require('./views/sections/header.html') %>
-        <%= require('./views/sections/social.html') %>
-        <%= require('./views/sections/video.html') %>
-        <%= require('./views/sections/instagram.html') %>
-        <%= require('./views/sections/footer.html') %>
-        <%= require('./views/partials/chord.html') %>
+        <%= _.template(require('./views/sections/header.html'))(data) %>
+        <%= _.template(require('./views/sections/social.html'))(data) %>
+        <%= _.template(require('./views/sections/video.html'))(data) %>
+        <%= _.template(require('./views/sections/instagram.html'))(data) %>
+        <%= _.template(require('./views/sections/footer.html'))(data) %>
+        <%= _.template(require('./views/sections/chord.html'))(data) %>
     </div>
     <!-- Google Analytics: match UA-XXXXX-Y to be your site's ID. -->
     <script>

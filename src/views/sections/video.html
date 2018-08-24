@@ -1,32 +1,10 @@
 <div id="video-section" class="b-video">
-  <div class="b-video__item">
-    <div class="b-video__wrap">
-      <iframe src="https://www.youtube.com/embed/KJRZTkttgLw?controls=1&showinfo=0" allowfullscreen></iframe>
+  <% _.each(video.list, function(item) { %>
+    <div class="b-video__item">
+      <div class="b-video__wrap">
+        <iframe src="https://www.youtube.com/embed/<%= item.id %>?controls=1&showinfo=0" allowfullscreen></iframe>
+      </div>
+      <p class="b-video__desc"><%= item.title %></p>
     </div>
-    <p class="b-video__desc">Драконяча Кров</p>
-  </div>
-  <div class="b-video__item">
-    <div class="b-video__wrap">
-      <iframe src="https://www.youtube.com/embed/oQkdQlXOBGU?controls=1&showinfo=0" allowfullscreen></iframe>
-    </div>
-    <p class="b-video__desc">Вiдьма</p>
-  </div>
-  <div class="b-video__item">
-    <div class="b-video__wrap">
-      <iframe src="https://www.youtube.com/embed/luhuB5E-efQ?controls=1&showinfo=0" allowfullscreen></iframe>
-    </div>
-    <p class="b-video__desc">Не Людина</p>
-  </div>
-  <div class="b-video__item">
-    <div class="b-video__wrap">
-      <iframe src="https://www.youtube.com/embed/OAclArZrU1E?controls=1&showinfo=0" allowfullscreen></iframe>
-    </div>
-    <p class="b-video__desc">Не Людина</p>
-  </div>
-  <div class="b-video__item">
-    <div class="b-video__wrap">
-      <iframe src="https://www.youtube.com/embed/AYshVbcEmUc?controls=1&showinfo=0" allowfullscreen></iframe>
-    </div>
-    <p class="b-video__desc">Не Людина</p>
-  </div>
+  <% }); %>
 </div>
