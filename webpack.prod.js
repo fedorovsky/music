@@ -3,8 +3,8 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const templateParameters = require('./src/template-data.js');
 
 process.env.NODE_ENV = 'production';
@@ -12,41 +12,65 @@ process.env.BABEL_ENV = 'production';
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',
   },
+  stats: {
+    colors: true,
+    modules: false,
+    chunks: false,
+    chunkGroups: false,
+    chunkModules: false,
+    env: true,
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: false,
+          ecma: 6,
+          mangle: true,
+        },
+      }),
+    ],
+  },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js/,
-        loaders: ['babel-loader', 'eslint-loader'],
+        test: /\.js$/,
         exclude: /node_modules/,
+        use: [{ loader: 'babel-loader' }],
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-                minimize: true,
-                importLoaders: 1,
-                modules: false,
-                localIdentName: '[path]-[local]-[hash:base64:8]',
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {},
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              modules: false,
+              localIdentName: '[path]-[local]-[hash:base64:8]',
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'postcss.config.js',
               },
             },
-            {
-              loader: require.resolve('postcss-loader'),
-              options: {
-                config: {
-                  path: 'postcss.config.js',
-                },
-              },
-            },
-          ],
-        }),
+          },
+        ],
       },
       {
         test: /\.html$/,
@@ -84,17 +108,11 @@ module.exports = {
       },
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        drop_console: false,
-        unsafe: true,
-      },
-    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin('css/style.css'),
-    new HtmlWebpackHarddiskPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/style.css',
+    }),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'src/fonts'),
@@ -109,28 +127,24 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, 'src/index.html'),
       filename: path.resolve(__dirname, 'public/index.html'),
-      alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       inject: true,
       templateParameters,
       template: path.resolve(__dirname, 'src/privacy.html'),
       filename: path.resolve(__dirname, 'public/privacy.html'),
-      alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       inject: true,
       templateParameters,
       template: path.resolve(__dirname, 'src/404.html'),
       filename: path.resolve(__dirname, 'public/404.html'),
-      alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       inject: true,
       templateParameters,
       template: path.resolve(__dirname, 'src/500.html'),
       filename: path.resolve(__dirname, 'public/500.html'),
-      alwaysWriteToDisk: true,
     }),
   ],
 };
