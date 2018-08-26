@@ -5,6 +5,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const templateParameters = require('./src/template-data.js');
 
 process.env.NODE_ENV = 'development';
 process.env.BABEL_ENV = 'development';
@@ -50,16 +51,9 @@ module.exports = {
         }),
       },
       {
-        test: /\.(html)$/,
-        include: path.join(__dirname, 'src/views'),
-        use: {
-          loader: 'html-loader',
-          options: {
-            minimize: true,
-            interpolate: true,
-            collapseWhitespace: false,
-          },
-        },
+        test: /\.html$/,
+        include: path.resolve(__dirname, 'src/views'),
+        use: ['raw-loader'],
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -131,18 +125,21 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
+      templateParameters,
       template: path.resolve(__dirname, 'src/privacy.html'),
       filename: path.resolve(__dirname, 'public/privacy.html'),
       alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       inject: true,
+      templateParameters,
       template: path.resolve(__dirname, 'src/404.html'),
       filename: path.resolve(__dirname, 'public/404.html'),
       alwaysWriteToDisk: true,
     }),
     new HtmlWebpackPlugin({
       inject: true,
+      templateParameters,
       template: path.resolve(__dirname, 'src/500.html'),
       filename: path.resolve(__dirname, 'public/500.html'),
       alwaysWriteToDisk: true,

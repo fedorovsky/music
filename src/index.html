@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<% var templateParameters = require('./template-data.js') %>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>The Atomic Guns</title>
+    <title><%= templateParameters.pageTitle %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta name="theme-color" content="#0b0b0c">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="<%= require(`./img/apple-touch-icon.png`) %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= require(`./img/favicon-32x32.png`) %>">
-    <link rel="icon" type="image/png" sizes="16x316" href="<%= require(`./img/favicon-16x16.png`) %>">
-    <link rel="mask-icon" href="<%= require(`./img/safari-pinned-tab.svg`) %>" color=“#17181d”>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x316" href="./img/favicon-16x16.png">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color=“#17181d”>
     <meta name=“msapplication-TileColor” content=“#da532c”>
 </head>
 
@@ -25,12 +27,12 @@
     </div>
     <!-- Sources -->
     <div id="sources">
-        <%= require('./views/sections/header.html') %>
-        <%= require('./views/sections/social.html') %>
-        <%= require('./views/sections/video.html') %>
-        <%= require('./views/sections/instagram.html') %>
-        <%= require('./views/sections/footer.html') %>
-        <%= require('./views/partials/chord.html') %>
+        <%= _.template(require('./views/sections/header.html'))(templateParameters) %>
+        <%= _.template(require('./views/sections/social.html'))(templateParameters) %>
+        <%= _.template(require('./views/sections/video.html'))(templateParameters) %>
+        <%= _.template(require('./views/sections/instagram.html'))(templateParameters) %>
+        <%= _.template(require('./views/sections/footer.html'))(templateParameters) %>
+        <%= _.template(require('./views/sections/chord.html'))(templateParameters) %>
     </div>
     <!-- Google Analytics: match UA-XXXXX-Y to be your site's ID. -->
     <script>
