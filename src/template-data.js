@@ -80,7 +80,7 @@ module.exports = {
     ],
   },
   footer: {
-    copyright: '2018 The Atomic Guns Records',
+    copyright: `&copy; ${new Date().getFullYear()} The Atomic Guns Records`,
     navigation: [
       {
         name: 'Terms & Conditions',
