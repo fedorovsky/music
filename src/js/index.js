@@ -8,7 +8,6 @@ import SocialCopy from './modules/copy-blocks/social-copy';
 import InstagramCopy from './modules/copy-blocks/instagram-copy';
 import FooterCopy from './modules/copy-blocks/footer-copy';
 import ChordCopy from './modules/copy-blocks/chord-copy';
-import '../css/style.css';
 
 const mediaQueries = new MediaQueries();
 

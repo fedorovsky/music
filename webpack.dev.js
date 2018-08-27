@@ -12,10 +12,17 @@ process.env.BABEL_ENV = 'development';
 module.exports = {
   devtool: 'source-map',
   mode: 'development',
-  entry: path.resolve(__dirname, 'src/js/index.js'),
+  entry: [
+    './src/js/index.js',
+    './src/css/style.css',
+  ],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',
+  },
+  optimization: {
+    noEmitOnErrors: true,
+    namedModules: true,
   },
   module: {
     rules: [
@@ -34,9 +41,6 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              importLoaders: 1,
-              modules: false,
-              localIdentName: '[path]-[local]-[hash:base64:8]',
             },
           },
           {
@@ -102,9 +106,7 @@ module.exports = {
         NODE_ENV: '"development"',
       },
     }),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.LoaderOptionsPlugin({ options: {} }),
-    new webpack.NamedModulesPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/style.css',
     }),

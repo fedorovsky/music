@@ -1,12 +1,9 @@
 {
-  "name": "simple-boilerplate",
+  "name": "ag",
   "version": "0.0.1",
-  "description": "Simple Boilerplate",
-  "keywords": [],
-  "repository": "https://github.com/fedorovsky/simple-boilerplate",
+  "description": "ag",
   "license": "MIT",
   "author": "Anton Fedorovskyi <anton.fedorovsky@gmail.com>",
-  "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "cors-proxy": "node cors-proxy",
@@ -46,6 +43,7 @@
     "imagemin-webpack-plugin": "^2.1.1",
     "mini-css-extract-plugin": "^0.4.2",
     "open-browser-webpack-plugin": "^0.0.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-flexbugs-fixes": "^3.3.0",
     "postcss-loader": "^2.1.0",
