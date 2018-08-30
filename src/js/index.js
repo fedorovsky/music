@@ -28,3 +28,5 @@ $(document).ready(() => {
   new FooterCopy().init();
   new ChordCopy().init();
 });
+
+console.log('ENV', process.env.NODE_ENV);
