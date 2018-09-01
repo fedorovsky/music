@@ -7,9 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const templateParameters = require('./src/template-data.js');
 
-process.env.NODE_ENV = 'production';
-process.env.BABEL_ENV = 'production';
-
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
   mode: 'production',
@@ -102,11 +99,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"',
-      },
-    }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),

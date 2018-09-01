@@ -10,14 +10,6 @@ import FooterCopy from './modules/copy-blocks/footer-copy';
 import ChordCopy from './modules/copy-blocks/chord-copy';
 import '../css/style.css';
 
-const mediaQueries = new MediaQueries();
-
-mediaQueries.match('xs', message => console.log('Responsive ->', message));
-mediaQueries.match('sm', message => console.log('Responsive ->', message));
-mediaQueries.match('md', message => console.log('Responsive ->', message));
-mediaQueries.match('lg', message => console.log('Responsive ->', message));
-
-
 $(document).ready(() => {
   new SubscribeForm().init();
   new SubscribePopup().init();
@@ -29,3 +21,12 @@ $(document).ready(() => {
   new FooterCopy().init();
   new ChordCopy().init();
 });
+
+/* DEVELOPMENT LOG */
+if (process.env.NODE_ENV === 'development') {
+  const mediaQueries = new MediaQueries();
+  mediaQueries.match('xs', message => console.log('Responsive ->', message));
+  mediaQueries.match('sm', message => console.log('Responsive ->', message));
+  mediaQueries.match('md', message => console.log('Responsive ->', message));
+  mediaQueries.match('lg', message => console.log('Responsive ->', message));
+}

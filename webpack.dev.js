@@ -6,9 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const templateParameters = require('./src/template-data.js');
 
-process.env.NODE_ENV = 'development';
-process.env.BABEL_ENV = 'development';
-
 module.exports = {
   devtool: 'source-map',
   mode: 'development',
@@ -97,11 +94,6 @@ module.exports = {
     },
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"development"',
-      },
-    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.LoaderOptionsPlugin({ options: {} }),
     new webpack.NamedModulesPlugin(),
