@@ -5,11 +5,15 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const templateParameters = require('./src/template-data.js');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/js/index.js'),
   mode: 'production',
+  entry: [
+    './src/js/index.js',
+    './src/css/style.css',
+  ],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',
@@ -33,6 +37,7 @@ module.exports = {
           mangle: true,
         },
       }),
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
   module: {
@@ -51,17 +56,11 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 1,
-              modules: false,
-              localIdentName: '[path]-[local]-[hash:base64:8]',
-            },
+            options: {},
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true,
               config: {
                 path: 'postcss.config.js',
               },
@@ -100,8 +99,6 @@ module.exports = {
   },
   plugins: [
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/style.css',
     }),

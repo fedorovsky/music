@@ -1,13 +1,12 @@
-# simple-boilerplate
+# ag
 
 - Babel
 - PostCSS
 - ESlint
 
-```yarn install```
-```yarn run start```
-```yarn run build```
-```yarn run fix```
+```yarn install```  
+```yarn run start```  
+```yarn run build```  
+```yarn run fix```  
 
-``` <img src="${require(`../../img/photo.jpg`)}" alt=""> ```
 ``` background-image: url('~/img/photo.jpg'); ```
