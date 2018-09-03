@@ -126,6 +126,14 @@
       border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     }
 
+    @media (--sm-only) {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     @media (--xs-only) {
       margin-bottom: 2.5rem;
 
