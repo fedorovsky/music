@@ -1,13 +1,18 @@
 <div id="video-section" class="b-video">
-  <% _.each(video.list, function(item) { %>
+    <% _.each(video.list, function(item) { %>
     <div class="b-video__item">
 
-      <div class="b-video__wrap js-youtube" data-embed="<%= item.id %>">
-          <img class="b-video__preview" src="https://img.youtube.com/vi/<%= item.id %>/sddefault.jpg" alt="preview">
-          <div class="b-video__play"></div>
-      </div>
+        <div class="b-video__wrap js-youtube-container" data-embed="<%= item.id %>">
+            <img class="b-video__preview" src="https://img.youtube.com/vi/<%= item.id %>/sddefault.jpg" alt="preview">
+            <svg class="b-video__play">
+                <g>
+                    <circle fill-opacity="0.6" fill="#000000" cx="15" cy="15" r="15"></circle>
+                    <polygon fill="#FFFFFF" points="20.9 14.95 11 19.9 11 10"></polygon>
+                </g>
+            </svg>
+        </div>
 
-      <p class="b-video__desc"><%= item.title %></p>
+        <p class="b-video__desc"><%= item.title %></p>
     </div>
-  <% }); %>
+    <% }); %>
 </div>
