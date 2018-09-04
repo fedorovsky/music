@@ -30,3 +30,25 @@ if (process.env.NODE_ENV === 'development') {
   mediaQueries.match('md', message => console.log('Responsive ->', message));
   mediaQueries.match('lg', message => console.log('Responsive ->', message));
 }
+
+/* eslint-disable */
+( function() {
+  
+  var youtube = document.querySelectorAll( ".js-youtube" );
+  
+  for (var i = 0; i < youtube.length; i++) {
+    
+    youtube[i].addEventListener( "click", function() {
+      
+      var iframe = document.createElement( "iframe" );
+      
+      iframe.setAttribute( "frameborder", "0" );
+      iframe.setAttribute( "allowfullscreen", "allowfullscreen" );
+      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+      
+      this.innerHTML = "";
+      this.appendChild( iframe );
+    } );
+  };
+  
+} )();

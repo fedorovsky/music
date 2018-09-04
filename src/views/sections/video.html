@@ -1,9 +1,12 @@
 <div id="video-section" class="b-video">
   <% _.each(video.list, function(item) { %>
     <div class="b-video__item">
-      <div class="b-video__wrap">
-        <iframe src="https://www.youtube.com/embed/<%= item.id %>?controls=1&showinfo=0" allowfullscreen></iframe>
+
+      <div class="b-video__wrap js-youtube" data-embed="<%= item.id %>">
+          <img class="b-video__preview" src="https://img.youtube.com/vi/<%= item.id %>/sddefault.jpg" alt="preview">
+          <div class="b-video__play"></div>
       </div>
+
       <p class="b-video__desc"><%= item.title %></p>
     </div>
   <% }); %>
