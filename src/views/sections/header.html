@@ -32,11 +32,13 @@
           </g>
         </svg>
       </button>
+      <!-- PHRASES -->
       <ul id="phrases" class="b-phrases">
         <% _.each(subscribe.phrases, function(item) { %>
-        <li class="b-phrases__text"><%= item %></li>
+        <li class="b-phrases__text js-phrases"><%= item %></li>
         <% }); %>
       </ul>
+      <!-- PHRASES END -->
       <div class="b-subscribe__form">
         <p id="label-default" class="b-subscribe__label"><%= subscribe.label %></p>
         <div id="success-message" class="b-subscribe__success"><%= subscribe.success %></div>
@@ -62,6 +64,4 @@
       </g>
     </svg>
   </div>
-
-
 </header>
