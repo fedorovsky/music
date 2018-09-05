@@ -9,7 +9,6 @@ import InstagramCopy from './modules/copy-blocks/instagram-copy';
 import FooterCopy from './modules/copy-blocks/footer-copy';
 import ChordCopy from './modules/copy-blocks/chord-copy';
 import YouTubeEmbed from './modules/youtube-embed';
-import '../css/style.css';
 
 $(document).ready(() => {
   new SubscribeForm().init();
