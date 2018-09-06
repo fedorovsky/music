@@ -8,11 +8,12 @@ import SocialCopy from './modules/copy-blocks/social-copy';
 import InstagramCopy from './modules/copy-blocks/instagram-copy';
 import FooterCopy from './modules/copy-blocks/footer-copy';
 import ChordCopy from './modules/copy-blocks/chord-copy';
-import '../css/style.css';
+import YouTubeEmbed from './modules/youtube-embed';
 
 $(document).ready(() => {
   new SubscribeForm().init();
   new SubscribePopup().init();
+  new YouTubeEmbed().init();
   /* COPY BLOCKS */
   new VideoCopy().init();
   new HeaderCopy().init();

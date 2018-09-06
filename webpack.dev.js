@@ -9,7 +9,10 @@ const templateParameters = require('./src/template-data.js');
 module.exports = {
   devtool: 'source-map',
   mode: 'development',
-  entry: path.resolve(__dirname, 'src/js/index.js'),
+  entry: [
+    './src/js/index.js',
+    './src/css/style.css',
+  ],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',

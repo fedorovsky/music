@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         title: 'Не Людина',
-        id: 'luhuB5E-efQ',
+        id: 'KJRZTkttgLw',
       },
       {
         title: 'Не Людина',
