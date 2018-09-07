@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-clickout';
 
 class SubscribePopup {
   init() {
@@ -14,14 +15,8 @@ class SubscribePopup {
     this.btnOpenSubscribe.on('click', this.openPopUp.bind(this));
     this.btnCloseSubscribe.on('click', this.closePopUp.bind(this));
 
-    $(window).on('click', event => {
-      event.stopPropagation();
-      const isOpenBth = $(event.target).is(this.btnOpenSubscribe);
-      const isInside = $(event.target).closest(this.subscribeBox).length;
-      if (!isOpenBth && !isInside) {
-        console.log('isOutside');
-        this.closePopUp();
-      }
+    this.subscribeBox.add(this.btnOpenSubscribe).on('clickout', () => {
+      this.closePopUp();
     });
   }
 

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
+    "jquery-clickout": "^0.0.3",
     "jquery-validation": "^1.17.0"
   },
   "devDependencies": {
