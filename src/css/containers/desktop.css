@@ -17,10 +17,17 @@
 
   .left {
     position: relative;
+    z-index: 2;
     flex: 0 0 320px;
     max-width: 320px;
     height: 100vh;
     margin-right: 75px;
+  }
+
+  .right {
+    z-index: 1;
+    flex: 0 0 510px;
+    max-width: 510px;
   }
 
   .left-main {
@@ -31,11 +38,6 @@
     @media all and (-ms-high-contrast: none) {
       transform: translateZ(1px);
     }
-  }
-
-  .right {
-    flex: 0 0 510px;
-    max-width: 510px;
   }
 }
 

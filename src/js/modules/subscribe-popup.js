@@ -6,6 +6,7 @@ class SubscribePopup {
     this.btnOpenSubscribe = $('#subscribe-open');
     this.btnCloseSubscribe = $('#subscribe-close');
     this.phrases = $('.js-phrases');
+    this.overlay = $('#js-overlay');
     this.handlers();
   }
 
@@ -16,16 +17,26 @@ class SubscribePopup {
 
   openPopUp() {
     this.subscribeBox.addClass('--state-open');
+    this.showOverlay();
     this.hideAllPhrases();
     this.showRandomPhrase();
   }
 
   closePopUp() {
     this.subscribeBox.removeClass('--state-open');
+    this.hideOverlay();
   }
 
   hideAllPhrases() {
     this.phrases.each((i, element) => $(element).hide());
+  }
+
+  showOverlay() {
+    this.overlay.addClass('--state-open');
+  }
+
+  hideOverlay() {
+    this.overlay.removeClass('--state-open');
   }
 
   showRandomPhrase() {

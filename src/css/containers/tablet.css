@@ -13,11 +13,13 @@
 
   .left {
     position: relative;
+    z-index: 1;
     flex: 0 1 380px;
   }
 
   .right {
     position: relative;
+    z-index: 2;
     flex: 0 0 320px;
     height: 100vh;
     overflow: hidden;
