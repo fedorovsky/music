@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 class SubscribePopup {
   init() {
-    this.subscribeBox = $('#subscribe-main');
+    this.subscribeBox = $('#js-subscribe-box');
     this.btnOpenSubscribe = $('#subscribe-open');
-    this.btnCloseSubscribe = $('#subscribe-close');
+    this.btnCloseSubscribe = $('#js-subscribe-close');
     this.phrases = $('.js-phrases');
     this.overlay = $('#js-overlay');
     this.handlers();
@@ -13,6 +13,16 @@ class SubscribePopup {
   handlers() {
     this.btnOpenSubscribe.on('click', this.openPopUp.bind(this));
     this.btnCloseSubscribe.on('click', this.closePopUp.bind(this));
+
+    $(window).on('click', event => {
+      event.stopPropagation();
+      const isOpenBth = $(event.target).is(this.btnOpenSubscribe);
+      const isInside = $(event.target).closest(this.subscribeBox).length;
+      if (!isOpenBth && !isInside) {
+        console.log('isOutside');
+        this.closePopUp();
+      }
+    });
   }
 
   openPopUp() {
